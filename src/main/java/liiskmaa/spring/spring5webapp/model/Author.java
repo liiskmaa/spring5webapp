@@ -12,6 +12,9 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    @OneToOne
+    private Publisher publisher;
+
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books  = new HashSet<>();
 
